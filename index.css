@@ -1,0 +1,35 @@
+body {
+    margin: 5%;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    display: grid;
+    justify-content: center;
+}
+
+.title {
+    color: #16697A;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.entry-textbox {
+    background-color: #FFA62B;
+    width: 20em;
+    height: 10em;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    border: unset;
+    border-radius: 25px;
+}
+
+/* to not show the border when typing*/
+.entry-textbox:focus {
+    outline: none;
+}
+
+/* to specifically target the button inside the entryForm id element */
+#entryForm .button {
+    border: unset;
+    border-radius: 25px;
+    padding: 5px 16px;
+    margin-left: 76%;
+}
