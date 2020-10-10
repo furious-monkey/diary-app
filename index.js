@@ -1,14 +1,16 @@
 const entryForm = document.getElementById('entryForm')
-const entriesSection = document.getElementById('entries')
-const entryTextbox = document.getElementsByClassName('entry-textbox')
+const entriesSection = document.querySelector('#entries')
+const entryTextbox = document.querySelector('.entry-textbox')
+const entriesNav = document.querySelector('.entries-nav')
 
 function addEntryToDom(event) {
     event.preventDefault() // to avoid refresh when submiting the form.
     const entryDiv = document.createElement("div")
     entryDiv.className = 'single-entry' //asign classname to the new div element.
-    entryDiv.innerText = entryTextbox[0].value //because getElementsByClassName returns a "array-like" object we need to look at the first index of it to get the value.
+    entryDiv.innerText = entryTextbox.value //because getElementsByClassName returns a "array-like" object we need to use entryTextbox[0].value to look at the first index of it to get the value. .querySelector returns the first element that match.
+    entryDiv.style.display = 'none' //Hide value of input by default
     entriesSection.append(entryDiv)
-    entryTextbox[0].value = ''
+    entryTextbox.value = '' //resets the content of the entryTextbox
 }
 
 //listening for the submit and calling function to prevent refresh.
