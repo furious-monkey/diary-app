@@ -2,7 +2,7 @@ const entryForm = document.getElementById('entryForm')
 const entriesSection = document.querySelector('#entries')
 const entryTextbox = document.querySelector('.entry-textbox')
 const entriesNav = document.querySelector('.entries-nav')
-
+let entryCountNumber = 1
 function addEntryToDom(event) {
     event.preventDefault() // to avoid refresh when submiting the form.
     const entryDiv = document.createElement("div")
@@ -11,10 +11,10 @@ function addEntryToDom(event) {
     entryDiv.style.display = 'none' //Hide value of input by default
     entriesSection.append(entryDiv)
     entryTextbox.value = '' //resets the content of the entryTextbox
-    const displayEntryButton = document.createElement('button');
-    displayEntryButton.className = 'display-entry-button';
-    displayEntryButton.innerText = 1;
-    entriesNav.appendChild(displayEntryButton);
+    const displayEntryButton = document.createElement('button')
+    displayEntryButton.className = 'display-entry-button'
+    displayEntryButton.innerText = entryCountNumber++
+    entriesNav.appendChild(displayEntryButton)
 }
 
 //listening for the submit and calling function to prevent refresh.
