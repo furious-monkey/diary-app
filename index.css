@@ -44,3 +44,12 @@ body {
      border-radius: 25px;
      margin-top: 1em;
  }
+
+ .display-entry-button {
+     padding-bottom: 1em;
+     margin: 0.2em;
+ }
+ 
+ .display-entry-button:hover {
+     cursor: pointer;
+ }
