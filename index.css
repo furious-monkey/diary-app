@@ -45,8 +45,11 @@ body {
      margin-top: 1em;
  }
 
- .display-entry-button {
+ .entries-nav {
      padding-bottom: 1em;
+ }
+
+ .display-entry-button {
      margin: 0.2em;
  }
  
