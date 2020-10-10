@@ -11,6 +11,10 @@ function addEntryToDom(event) {
     entryDiv.style.display = 'none' //Hide value of input by default
     entriesSection.append(entryDiv)
     entryTextbox.value = '' //resets the content of the entryTextbox
+    const displayEntryButton = document.createElement('button');
+    displayEntryButton.className = 'display-entry-button';
+    displayEntryButton.innerText = 1;
+    entriesNav.appendChild(displayEntryButton);
 }
 
 //listening for the submit and calling function to prevent refresh.
