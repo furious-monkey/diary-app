@@ -15,6 +15,10 @@ function addEntryToDom(event) {
     displayEntryButton.className = 'display-entry-button'
     displayEntryButton.innerText = entryCountNumber++
     entriesNav.appendChild(displayEntryButton)
+
+    displayEntryButton.addEventListener('click', function(){
+      entryDiv.style.display = 'block'
+    })
 }
 
 //listening for the submit and calling function to prevent refresh.
